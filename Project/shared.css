@@ -9,7 +9,7 @@ html {
 	font-size: 62.5%;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	-webkit-text-size-adjust: 100%;
-	-ma-text-size-adjust: 100%;	
+	-ms-text-size-adjust: 100%;	
 }
 
 body {
@@ -17,7 +17,7 @@ body {
 	margin: 0;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 1.42857143;
-	color: %333;
+	color: #333;
 	background-color: #fff;
 }
 
@@ -37,7 +37,7 @@ h1 {
 	text-transform: uppercase;
 	text-align: center;
 	color: #E91C1C;
-	text-shadow: 2px 2px 3px rgba(0,0,0,5);
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 }
 
 h1::after { /*This is the underline*/
@@ -47,12 +47,13 @@ h1::after { /*This is the underline*/
 	width: 150px;
 	background: #E91C1C;
 	margin: 5px auto 40px;
-	box-shadow: 5px 2px 3px rgba(0,0,0,5);
+	box-shadow: 5px 2px 3px rgba(0,0,0,0.5);
 }
 
 h2 {
 	line-height: 50px;
-	color: #E91C1C
+	text-align: center;
+	color: #E91C1C;
 }
 
 h3 {
@@ -135,7 +136,7 @@ section {
 
 .menu-container {
 	max-height: 340px;
-	margin: 0% auto;
+	margin: 0% auto; /*center alignment */
 	content: " ";
 	/* top: 0;
 	left: 0; */
@@ -150,7 +151,7 @@ section {
 	HOME SECTION STYLES
 ------------------------*/
 #home {
-	background: url(./Images/Thumb/Street_Photo_Wallpaper.jpg) no-repeat 50% 50%;
+	background: url(./Images/Thumb/Street_Photo_Header.jpg) no-repeat 50% 50%;
 	background-attachment: fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -165,7 +166,7 @@ section {
 }
 
 .head-main {
-	text-shadow: 2px 4px 5px rgba (0, 0, 0, 0.9);
+	text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.9);
 	font-variant: small-caps;
 	color: #fff;
 	letter-spacing: 5pt;
@@ -210,16 +211,16 @@ section {
 }
 
 #contact {
-	background-color: #f5f3f3;
+	background-color: #F5F3F3;
 }
 
 .reservation {
 	width: 60%;
 	padding: 10px;
-	border-radius: 0px;
+	border-radius: 8px;
 	margin: 0px auto;
-	background-color: rgba(100, 65,0,.3);
-	box-shadow: -1px -1px 1px 0 rgba (0,0,0,0.1), 1px 2px 10px 0 rgba(0,0,0,0.5);
+	background-color: rgba(100,65,0,0.3);
+	box-shadow: -1px -1px 1px 0 rgba(0,0,0,0.1), 1px 2px 10px 0 rgba(0,0,0,0.5);
 }
 
 .reservation h2 {
@@ -255,22 +256,27 @@ section {
 	font-size: 15px;
 	outline: none;
 	font-weight: 600;
-	color: #8D8E8F;
+	color: #8D8E8F; 
 	padding: 12px 12px;
 	width: 70%;
 	border: 1px solid #808080;
 	margin: 2% auto;
 	border-radius: 7px;
 	background: rgb(227,222,222);
-	box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: 2px 3px 3px 0px rgba(0,0,0,0.3);
 	font-family: 'Raleway', sans-serif;
+}
+
+::placeholder {
+    color: #8D8E8F;
+    opacity: 1;
 }
 
 .reservation input[type="text"] {
 	font-size: 15px;
 	outline: none;
 	font-weight: 600;
-	color: #8D8E8F;
+	color: #8D8E8F;  /* this is the color when user starts typing into form */
 	padding: 2% 1% 2% 7%;
 	width: 80%;
 	border-top: 1px solid #090B0D;
@@ -280,12 +286,12 @@ section {
 	margin: 10px 1em;
 	border-radius: 7px;
 	background: #13161B;
-	box-shadow: inset 0px 3px 0px 0px rgba(5, 5, 5, 0.15);
+	box-shadow: inset 0px 3px 0px 0px rgba(5,5,5,0.15);
 	font-family: 'Raleway', sans-serif;
 }
 
-.reservation input [type="text"]:hover {
-	box-shadow: 0, 0, 10px rgba(100,65,0,.8);
+.reservation input[type="text"]:hover {
+	box-shadow: 0, 0, 10px rgba(100,65,0,0.8);
 }
 	
 .form-spacer {
@@ -293,8 +299,8 @@ section {
 }
 
 .terms {
-	margin: 30px 1px 0 0;
-	padding-left: 53px;
+	margin: 23px 41px 0 0;
+	padding-left: 52px;
 	font-size: 14px;
 	line-height: 5px;
 	color: #000;
@@ -323,10 +329,10 @@ section {
 	padding: 7px 0px;
 	width: 25%;
 	font-size: 18px;
-	transition: border-color 0.3s color 0.3s background-color 0.3s;
+	transition: border-color, 0.3s color, 0.3s background-color 0.3s;
 	border-radius: 7px;
-	background-color: #797a7b;
-	box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.3)
+	background-color: #797A7B;
+	box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.3);
 }
 
 .submit input[type="submit"]:hover {
@@ -340,9 +346,9 @@ section {
 ---------------------------*/
 
 #footer {
-	background-color: rgba(100,65,0,.3);
+	background-color: rgba(100,65,0,0.3);
 	color: #000;
-	text-shadow: 2px 2px 8px 0 (0,0,0,0.4);
+	text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
 	padding: 20px 50px 20px 50px;
 	text-align: right;
 }
